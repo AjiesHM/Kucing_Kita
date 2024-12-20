@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Homepage of KucingKita">
+    <title>KucingKita - Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .scroll-element {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 1.5s ease-in-out;
+      }
+
+      .left {
+        transform: translateX(-100%);
+      }
+
+      .right {
+        transform: translateX(100%);
+      }
+
+      .left.scroll-in {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .right.scroll-in {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navigaton -->
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="myNavbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <img src="img/logo.png" width="25" alt="" class="d-inline-block align-text-center" />
+          KucingKita
+        </a>
+        <!-- <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-3 mt-3 mt-lg-0 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-bold active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Adopt</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="#">Blogs</a>
+            </li>
+          </ul>
+        </div> -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <!-- <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">NekoChigura</h5> -->
+            <a class="text-decoration-none fs-5 text-light fw-bold" href="index.html">
+              <img src="img/logo.png" width="25" alt="" class="d-inline-block align-text-center" />
+              NekoChigura
+            </a>
+            <button type="button" class="btn-close bg-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="adopt.html">Adopt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="blogs.html">Blogs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navigation -->
+
+    <!-- slider -->
+    <section>
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+            <div class="bg-image">
+              <img src="img/slide1.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover" alt="..." />
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.3)"></div>
+            </div>
+            <div class="carousel-caption carousel-center-caption">
+              <h1 class="fw-bold display-1">Bukan Pilihan Mereka untuk Hidup Tanpa Rumah.</h1>
+              <p>kucing liar tidak memilih hidup mereka yang sulit.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="bg-image">
+              <img src="img/slide2.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover" alt="..." />
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.3)"></div>
+            </div>
+            <div class="carousel-caption carousel-center-caption">
+              <h1 class="fw-bold display-1">Di Jalan yang Sepi, Mereka Hanya Butuh Sedikit Kasih.</h1>
+              <p>harapan mereka akan perhatian manusia.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <div class="bg-image">
+              <img src="img/slide3.jpg" class="d-block w-100" style="height: 100vh; object-fit: cover" alt="..." />
+              <div class="mask" style="background-color: rgba(0, 0, 0, 0.3)"></div>
+            </div>
+            <div class="carousel-caption carousel-center-caption">
+              <h1 class="fw-bold display-1">"Hujan, Lapar, dan Sepi Itulah Dunia Mereka.</h1>
+              <p> Kesulitan yang dialami kucing sehari-hari.</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- slider -->
+
+    <!-- Bar info -->
+    <section style="margin-bottom: 5em">
+      <div class="container" style="margin-top: 5em; margin-bottom: 5em">
+        <div class="row">
+          <div class="col-sm align-self-center">
+            <div class="scroll-element left">
+              <h1 class="fw-bold display-3">Berbagi Kasih, Tanpa memandang ras Kucing</h1>
+              <p class="lead">Menyuarakan kepedulian dan tindakan untuk kucing jalanan yang membutuhkan perhatian kita.</p>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="scroll-element right">
+              <img src="img/undraw_friends_r511.svg" class="d-block img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr width="200" class="mx-auto" />
+
+      <div class="container" style="margin-top: 5em; margin-bottom: 5em">
+        <div class="row">
+          <div class="col-sm">
+            <div class="scroll-element left">
+              <img src="img/undraw_cat_re_d1sv.svg" class="d-block img-fluid" alt="" />
+            </div>
+          </div>
+          <div class="col-sm align-self-center">
+            <div class="scroll-element right">
+              <h1 class="fw-bold display-3">Jangan Biarkan Mereka Lapar, Jadilah Teman Setia Kucing</h1>
+              <p class="lead">Mengajak orang untuk memberi makan dan peduli terhadap kesejahteraan kucing liar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr width="200" class="mx-auto" />
+
+      <div class="container" style="margin-top: 5em; margin-bottom: 5em">
+        <div class="row">
+          <div class="col-sm align-self-center">
+            <div class="scroll-element left">
+              <h1 class="fw-bold display-3">Satu Cinta untuk Seribu Kehidupan Kucing Liar</h1>
+              <p class="lead">Menggambarkan bahwa cinta dan perhatian kecil bisa membawa perubahan besar bagi mereka.</p>
+              <a href="adopt.html" class="btn btn-primary mb-3">Mencari Teman ?</a>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="scroll-element right">
+              <img src="img/undraw_pet_adoption_-2-qkw.svg" class="d-block img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bar info -->
+
+    <!-- popular cat -->
+    <section class="bg-dark" style="padding-top: 5em; padding-bottom: 5em">
+      <div class="container">
+        <div>
+          <h1 class="display-3 fw-bold text-white text-center">Teman Kucing Kita</h1>
+          <p class="lead text-white text-center mb-3">Mungkin kalian berminat untuk mengunjungi mereka</p>
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <div class="col">
+              <div class="card h-100 text-white">
+                <img src="img/slide1.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Ireng</h5>
+                  <p class="card-text">Sangat tenang dan manja</p>
+                </div>
+                <div class="card-footer">
+                  <small class="">Status: Duda</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 text-white">
+                <img src="img/slide2.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Berilium</h5>
+                  <p class="card-text">Sangat aktif memberikan rasa kebahagiaan.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="">Status: Anak Remaja</small>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100 text-white">
+                <img src="img/slide3.jpg" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fw-bold">Tante Ireng</h5>
+                  <p class="card-text">Mandiri dan tangguh menjadi ibu.</p>
+                </div>
+                <div class="card-footer">
+                  <small class="">Status: Janda</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 5em">
+          <h1 class="display-3 fw-bold text-white text-center">KucingKita</h1>
+          <p class="lead text-white text-center mb-3">Tertarik Untuk membaca cerita mereka ?</p>
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+            <a href="blog-detail.html" class="text-decoration-none">
+              <div class="col">
+                <div class="card h-100 text-white">
+                  <img src="img/slide1.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Cerita si Ireng #1</h5>
+                    <span class="">09 Desember 2024</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="blog-detail.html" class="text-decoration-none">
+              <div class="col">
+                <div class="card h-100 text-white">
+                  <img src="img/slide2.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Cerita si Berilium #1</h5>
+                    <span class="">09 Desember 2024</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="blog-detail.html" class="text-decoration-none">
+              <div class="col">
+                <div class="card h-100 text-white">
+                  <img src="img/slide3.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">Cerita Tante Ireng #1</h5>
+                    <span class="">09 Desember 2024</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex justify-content-center mt-5">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- popular cat -->
+    <!-- copyright -->
+    <div class="d-flex justify-content-center align-items-center flex-column bg-secondary py-3">
+      <div style="font-size: 9pt" class="px-2 text-white">&copy; Copyright by KucingKita.All rights reserved.</div>
+    </div>
+    <!-- copyright -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script>
+      window.addEventListener("scroll", function () {
+        let scrollPosition = window.pageYOffset;
+        let elements = document.querySelectorAll(".scroll-element");
+
+        elements.forEach(function (element) {
+          let elementPosition = element.offsetTop;
+          let windowHeight = window.innerHeight;
+
+          if (scrollPosition + windowHeight >= elementPosition) {
+            element.classList.add("scroll-in");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Adoption page KucingKita">
+    <title>KucingKita - Adoption</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      #search-filters .nav-link{
+        color: #000000;
+      }
+
+      #search-filters .nav-link.active{
+        background-color: #C1C1C1!important;
+        color: #000000;
+      }
+
+      .img-card-adopt{
+        object-fit: cover; 
+        width: 100%; 
+        height: 100%; 
+        border-top-right-radius: 0.375rem; 
+        border-top-left-radius: 0.375rem;
+      }
+
+      .galery-items {
+        object-fit: cover; height: 100%; width: 100%;
+      }
+      .galery-items:hover{
+        border: 3px solid #0D6EFD;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navigaton -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg" id="myNavbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <img src="img/logo.png" width="25" alt="" class="d-inline-block align-text-center" />
+          KucingKita
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end bg-dark"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <a class="text-decoration-none fs-5 text-light fw-bold" href="index.html">
+              <img src="img/logo.png" width="25" alt="" class="d-inline-block align-text-center" />
+              NekoChigura
+            </a>
+            <button type="button" class="btn-close bg-danger" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link fw-bold" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold active" href="adopt.html">Adopt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fw-bold" href="blogs.html">Blogs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navigation -->
+
+    <!-- banner -->
+    <section>
+      <div class="container">
+        <div class="d-flex justify-content-around align-items-center py-5">
+          <div class="d-flex flex-column">
+            <span class="fw-bold display-2">Ingin berjumpa dengan mereka ?</span>
+            <span class="lead">Cari tau tentang mereka disni</span>
+          </div>
+          <img src="img/pngwing.com.png" class="w-25 d-none d-md-block" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- banner -->
+
+    <!-- adoption panel -->
+    <section style="background-color: #d3d3d3">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col h-100 mb-4" id="search-filters">
+            <span class="d-block fw-bold fs-3">Pencariain untuk kalian</span>
+
+            <div class="d-flex flex-lg-column w-100 gap-1 d-none d-lg-block">
+              <div class="flex-fill">
+                <span class="d-block fw-bold fs-5 mb-1">Jenis Kelamin</span>
+                <nav class="nav nav-pills flex-column gap-1">
+                  <button class="flex-sm-fill nav-link text-start filter-gender rounded-0" id="gender1" onclick="setActive('gender', 1)">Male</button>
+                  <button class="flex-sm-fill nav-link text-start filter-gender rounded-0" id="gender2" onclick="setActive('gender', 2)">Female</button>
+                  <button class="flex-sm-fill nav-link text-start filter-gender rounded-0" id="gender3" onclick="setActive('gender', 3)">Neutered</button>
+                </nav>
+              </div>
+              <hr class="">
+              <div class="flex-fill">
+                <span class="d-block fw-bold fs-5 mb-1">Umur</span>
+                <nav class="nav nav-pills flex-column gap-1">
+                  <button class="flex-sm-fill nav-link text-start filter-age rounded-0" id="age1" onclick="setActive('age', 1)">Kitten</button>
+                  <button class="flex-sm-fill nav-link text-start filter-age rounded-0" id="age2" onclick="setActive('age', 2)">Cat</button>
+                  <button class="flex-sm-fill nav-link text-start filter-age rounded-0" id="age3" onclick="setActive('age', 3)">Senior</button>
+                </nav>
+              </div>
+            </div>
+            
+            <div class="d-grid d-lg-none gap-2">
+              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#filter-modal"><i class="fa fa-filter"></i> Filter</button>
+            </div>
+          </div>
+          <div class="col-12 col-lg-9">
+            <div class="row row-cols-1 row-cols-md-4 g-2">
+              <div class="col cat-container" data-bs-toggle="modal" data-bs-target="#exampleModal" data-img="img/slide2.jpg" data-name="Sora" data-age="2 years" data-gender="Male" data-location="Bandung" data-status="Available">
+                <div class="card h-100 bg-light">
+                  <div class="card-img-top" style="height: 200px">
+                    <img src="img/slide2.jpg" class="img-card-adopt" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Berilium</h5>
+                    <p class="card-text">Aktif</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col cat-container" data-bs-toggle="modal" data-bs-target="#exampleModal" data-img="img/slide3.jpg" data-name="Dudul" data-age="1 years" data-gender="Female" data-location="Bali" data-status="Available">
+                <div class="card h-100 bg-light">
+                  <div class="card-img-top" style="height: 200px">
+                    <img src="img/slide3.jpg" class="img-card-adopt" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Tante Ireng</h5>
+                    <p class="card-text">Mandiri dan tangguh.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col cat-container" data-bs-toggle="modal" data-bs-target="#exampleModal" data-img="img/slide4.jpg" data-name="Tamako" data-age="1 years" data-gender="Female" data-location="Japan" data-status="Available">
+                <div class="card h-100 bg-light">
+                  <div class="card-img-top" style="height: 200px">
+                    <img src="img/slide4.jpg" class="img-card-adopt" alt="..." />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Tamako</h5>
+                    <p class="card-text">Kucing yang lucu</p>
+                  </div>
+                </div>
+
+            <div class="d-flex gap-2 mt-4 float-end">
+              <!-- <button class="btn btn-light">Previous</button> -->
+              <button class="btn btn-light px-4">Selanjutnya</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- adoption panel -->
+
+    <!-- adoption modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn-danger btn mb-3" data-bs-dismiss="modal" aria-label="Close">
+                <i class="fa fa-times"></i>
+              </button>
+            </div>
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-3">
+                <div class="row mb-3">
+                  <div class="col-12 d-flex">
+                    <img src="img/slide2.jpg" id="show-preview-img" style="object-fit: cover; width: 100%; height: 400px;" class="rounded" alt="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-4 d-flex" onmouseover="changePict(this.children[0].getAttribute('src'))">
+                    <img src="img/slide3.jpg" id="cat-img-2"  class="rounded galery-items" alt="">
+                  </div>
+                  <div class="col-4 d-flex" onmouseover="changePict(this.children[0].getAttribute('src'))">
+                    <img src="img/slide4.jpg" id="cat-img-3" class="rounded galery-items" alt="">
+                  </div>
+                  <div class="col-4 d-flex" onmouseover="changePict(this.children[0].getAttribute('src'))">
+                    <img src="img/slide5.jpg" id="cat-img-4"  class="rounded galery-items" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <span class="fw-bold fs-3">About <span id="cat-name"></span></span>
+                <p class="lead">
+                  Di tunggu
+                </p>
+                <div class="rounded shadow border">
+                  <div class="p-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <span class="d-block fw-bold">Age</span>
+                        <span class="d-block mb-2"><span id="cat-age"></span> old</span>
+                        <span class="d-block fw-bold">Jenis kelamin</span>
+                        <span class="d-block" id="cat-gender">Female</span>
+                      </div>
+                      <div class="col-6">
+                        <span class="d-block fw-bold">Lokasi</span>
+                        <span class="d-block mb-2" id="cat-location">Serpong,Pamulang</span>
+                        <span class="d-block fw-bold">Status</span>
+                        <span class="d-block" id="cat-status">Kucing jalanan</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-grid gap-2 my-4">
+                  <button class="btn btn-primary" type="button">Tanyakan tentang kucing ini</button>
+                  <button class="btn btn-secondary" type="button">Cetak poster</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- adoption modal -->
+
+    <!-- filter modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="filter-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Refine your search</h1>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+          </div>
+          <div class="modal-body">
+            <div class="flex-fill">
+              <span class="d-block fw-bold fs-5 mb-1">Gender</span>
+              <label for="" class="d-block"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="setActive('gender', 1)"> Male</label>
+              <label for="" class="d-block"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="setActive('gender', 2)"> Female</label>
+              <label for="" class="d-block"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="setActive('gender', 3)"> Neutered</label>
+            </div>
+            <hr class="">
+            <div class="flex-fill">
+              <span class="d-block fw-bold fs-5 mb-1">Age</span>
+              <label for="" class="d-block"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="setActive('age', 1)"> Kitten</label>
+              <label for="" class="d-block"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="setActive('age', 2)"> Cat</label>
+              <label for="" class="d-block"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input" onclick="setActive('age', 3)"> Senior</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Apply Filter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- filter modal -->
+    <!-- copyright -->
+    <div class="d-flex justify-content-center align-items-center flex-column bg-secondary py-3">
+      <div style="font-size: 9pt" class="px-2 text-white">&copy; Copyright by KucingKita.All rights reserved.</div>
+    </div>
+    <!-- copyright -->
+
+    <script>
+      const exampleModal = document.getElementById("exampleModal");
+      exampleModal.addEventListener("show.bs.modal", (event) => {
+        const button = event.relatedTarget;
+        
+        const img = button.getAttribute("data-img");
+        const name = button.getAttribute("data-name");
+        const desc = button.getAttribute("data-desc");
+        const age = button.getAttribute("data-age");
+        const gender = button.getAttribute("data-gender");
+        const location = button.getAttribute("data-location");
+        const status = button.getAttribute("data-status");
+
+        changePict(img);
+        document.getElementById("cat-img-2").src = "img/cats/"+name.toLowerCase()+"-2.jpg";
+        document.getElementById("cat-img-3").src = "img/cats/"+name.toLowerCase()+"-3.jpg";
+        document.getElementById("cat-img-4").src = "img/cats/"+name.toLowerCase()+"-4.jpg";
+        document.getElementById("cat-name").textContent = name;
+        document.getElementById("cat-age").textContent = age;
+        document.getElementById("cat-gender").textContent = gender;
+        document.getElementById("cat-location").textContent = location;
+        document.getElementById("cat-status").textContent = status;
+      });
+
+      exampleModal.addEventListener('hidden.bs.modal', event => {
+        changePict("img/slide2.jpg");
+      })
+
+      function setActive(ids, index){
+        document.getElementById(ids+index).classList.toggle('active')      
+      }
+
+      function changePict(img){
+        document.getElementById('show-preview-img').src = img;
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
